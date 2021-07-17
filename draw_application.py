@@ -48,8 +48,8 @@ def predict():
     data_last = data.reshape((1,28,28,1)) #Reshape the data to be single entry
     result = model.predict(data_last)
     showinfo(
-        title='This is a',
-        message = result.argmax()
+        title='Predict Result',
+        message = f'This is a {result.argmax()}'
     )
 btn_predict = Button(window, text='Predict', command=predict).pack(side='left',fill='x', expand=True)
 
